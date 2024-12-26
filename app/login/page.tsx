@@ -1,4 +1,5 @@
 // app/login/page.tsx
+import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
@@ -8,7 +9,10 @@ export default async function LoginPage({ searchParams }: { searchParams: { erro
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="bg-black border border-gray-300 p-8 rounded-md shadow-lg w-full max-w-md">
-        <h2 className="text-center text-2xl font-medium text-white mb-4">Login</h2>
+        <div className="flex justify-center mb-6">
+          <Image src="/images/logo.png" alt="Logo" width={120} height={120} />
+        </div>
+        <h2 className="text-center text-2xl font-medium text-white mb-4">Dashboard Login</h2>
         {error && (
           <div className="text-red-500 mb-4 text-center">{error}</div>
         )}
